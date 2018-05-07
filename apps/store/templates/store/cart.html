@@ -1,0 +1,10 @@
+{% extends 'store/base.html' %}
+
+{% block title %}Checkout{% endblock %}
+
+{% block content %}
+    <h1>Thank you for your business!</h1>
+    <p>We charged your card for ${{ request.session.cart.last_charge }}.</p>
+    <p>You have ordered {{ request.session.cart.items }} items so far and spent ${{ request.session.cart.total }} with Amadon.com!</p>
+    <a href="/">Go Back</a>
+{% endblock %}
